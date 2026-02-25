@@ -1,0 +1,16 @@
+{
+  "name": "tree-sitter-likec4",
+  "version": "0.0.1",
+  "description": "LikeC4 architecture-as-code grammar for tree-sitter",
+  "license": "MIT",
+  "main": "bindings/node",
+  "keywords": ["parser", "tree-sitter", "likec4", "c4", "architecture"],
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.0"
+  },
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse"
+  }
+}

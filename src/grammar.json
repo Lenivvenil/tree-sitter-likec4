@@ -3654,8 +3654,24 @@
                 "value": "'''"
               },
               {
-                "type": "PATTERN",
-                "value": "[\\s\\S]*?"
+                "type": "REPEAT",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "PATTERN",
+                      "value": "[^']+"
+                    },
+                    {
+                      "type": "PATTERN",
+                      "value": "'[^']"
+                    },
+                    {
+                      "type": "PATTERN",
+                      "value": "''[^']"
+                    }
+                  ]
+                }
               },
               {
                 "type": "STRING",
@@ -3671,8 +3687,24 @@
                 "value": "\"\"\""
               },
               {
-                "type": "PATTERN",
-                "value": "[\\s\\S]*?"
+                "type": "REPEAT",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "PATTERN",
+                      "value": "[^\\\"]+"
+                    },
+                    {
+                      "type": "PATTERN",
+                      "value": "\\\"[^\\\"]"
+                    },
+                    {
+                      "type": "PATTERN",
+                      "value": "\\\"\\\"[^\\\"]"
+                    }
+                  ]
+                }
               },
               {
                 "type": "STRING",

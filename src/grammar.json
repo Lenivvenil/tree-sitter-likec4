@@ -3671,24 +3671,8 @@
                 "value": "\"\"\""
               },
               {
-                "type": "REPEAT",
-                "content": {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "PATTERN",
-                      "value": "[^\\\"]+"
-                    },
-                    {
-                      "type": "PATTERN",
-                      "value": "\\\"[^\\\"]"
-                    },
-                    {
-                      "type": "PATTERN",
-                      "value": "\\\"\\\"[^\\\"]"
-                    }
-                  ]
-                }
+                "type": "PATTERN",
+                "value": "(?:[^\\\"]+|\\\"{1,2}[^\\\"])*"
               },
               {
                 "type": "STRING",

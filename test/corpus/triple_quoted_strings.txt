@@ -5,7 +5,7 @@ multiple double-triple-quoted descriptions remain separate strings
 model {
   first = component "First" {
     description """
-      First Markdown description.
+      First "quoted" Markdown description with ""two quotes"".
     """
     technology 'Node.js'
   }

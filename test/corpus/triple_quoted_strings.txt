@@ -1,0 +1,38 @@
+==================
+multiple double-triple-quoted descriptions remain separate strings
+==================
+
+model {
+  first = component "First" {
+    description """
+      First "quoted" Markdown description with ""two quotes"".
+    """
+    technology 'Node.js'
+  }
+
+  second = component "Second" {
+    description """
+      Second Markdown description.
+    """
+    technology 'TypeScript'
+  }
+}
+
+---
+
+(source_file
+  (model_block
+    (element_declaration
+      name: (identifier)
+      kind: (identifier)
+      (string)
+      (element_body
+        (string)
+        (string)))
+    (element_declaration
+      name: (identifier)
+      kind: (identifier)
+      (string)
+      (element_body
+        (string)
+        (string)))))

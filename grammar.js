@@ -659,11 +659,7 @@ module.exports = grammar({
         choice(
           seq("'", repeat(choice(/[^'\\]/, /\\./)), "'"),
           seq('"', repeat(choice(/[^"\\]/, /\\./)), '"'),
-          seq(
-            "'''",
-            repeat(choice(/[^']+/, /'[^']/, /''[^']/)),
-            "'''",
-          ),
+          seq("'''", /[\s\S]*?/, "'''"),
           seq(
             '"""',
             repeat(choice(/[^\"]+/, /\"[^\"]/, /\"\"[^\"]/)),

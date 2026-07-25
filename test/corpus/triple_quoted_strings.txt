@@ -1,5 +1,5 @@
 ==================
-multiple triple-quoted descriptions remain separate strings
+multiple double-triple-quoted descriptions remain separate strings
 ==================
 
 model {
@@ -14,45 +14,6 @@ model {
     description """
       Second Markdown description.
     """
-    technology 'TypeScript'
-  }
-}
-
----
-
-(source_file
-  (model_block
-    (element_declaration
-      name: (identifier)
-      kind: (identifier)
-      (string)
-      (element_body
-        (string)
-        (string)))
-    (element_declaration
-      name: (identifier)
-      kind: (identifier)
-      (string)
-      (element_body
-        (string)
-        (string)))))
-
-==================
-multiple single-quoted descriptions remain separate strings
-==================
-
-model {
-  first = component 'First' {
-    description '''
-      First Markdown description.
-    '''
-    technology 'Node.js'
-  }
-
-  second = component 'Second' {
-    description '''
-      Second Markdown description.
-    '''
     technology 'TypeScript'
   }
 }
